@@ -1,0 +1,198 @@
+﻿body
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+#header
+{
+    padding: 20px;
+    cursor:move;
+    font-size: 24px;
+}
+
+.submitButton
+{
+    background-color: #d7e5e4;
+    border: #5f9482 solid 1px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+    .submitButton:hover
+    {
+        background-color: #e1e1e1;
+    }
+
+.login
+{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: solid 2px white;
+    color: #1e4638;
+}
+
+    .login .textBox
+    {
+        /*width: 240px;*/
+    }
+
+
+    .login #divButton
+    {
+        padding: 4px;
+        text-align: right;
+    }
+
+     .col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.chatRoom
+{
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px white;
+}
+
+    .chatRoom .title
+    {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 8px;
+        border-bottom: solid 1px white;
+    }
+
+    .chatRoom .content
+    {
+        height: 300px;
+        clear: both;
+    }
+
+        .chatRoom .content .chatWindow
+        {
+            float: left;
+            width: 409px;
+            height: 300px;
+            border-right: solid 1px white;
+            overflow-y: scroll;
+        }
+
+            .chatRoom .content .chatWindow .message
+            {
+                padding: 4px;
+            }
+
+                .chatRoom .content .chatWindow .message .userName
+                {
+                    font-weight: bold;
+                }
+
+        .chatRoom .content .users
+        {
+            float: right;
+            width: 238px;
+            height: 250px;
+        }
+
+            .chatRoom .content .users .user
+            {
+                display: block;
+                cursor: pointer;
+                padding: 2px;
+                background-color: #f9f9f9;
+                border-bottom: solid 1px white;
+            }
+
+            .chatRoom .content .users .loginUser
+            {
+                display: block;
+                padding: 4px;
+                color: gray;
+                border-bottom: solid 1px white;
+            }
+
+            .chatRoom .content .users .user:hover
+            {
+                background-color: #e1e1e1;
+            }
+
+    .chatRoom .messageBar
+    {
+        border-top: solid 1px white;
+        padding-top: 0px;
+        padding-bottom: 4px;
+        padding-left:0px;
+        padding-right:0px;
+        height:42px;
+    }
+
+        .chatRoom .messageBar .textbox
+        {
+        padding: 0px;
+      
+        }
+
+.disconnect
+{
+    position: absolute;
+    margin: 10px;
+    background-color: #ffcbcb;
+    padding: 4px;
+    border: solid 1px red;
+}
+
+
+.draggable
+{
+    position: fixed;
+    border: #5f9482 solid 1px !important;
+    width: 250px;
+    z-index: +1;
+}
+
+    .draggable .header
+    {
+        cursor: move;
+    }
+
+    .draggable .selText
+    {
+        color: black;
+        padding: 4px;
+    }
+
+    .draggable .messageArea
+    {
+        width: 248px;
+        overflow-y: scroll;
+        height: 200px;
+         border-bottom: #5f9482 solid 1px;
+    }
+
+        .draggable .messageArea .message
+        {
+            padding: 4px;
+        }
+
+    .draggable .buttonBar
+    {
+       padding:0px;
+    }
+
+        .draggable .buttonBar .msgText
+        {
+            /*width: 150px;*/
+        }
+
+        .draggable .buttonBar .button
+        {
+           margin-left:4px;
+            width: 55px;
+        }
+        /*.well{
+            background-color:#00CCFF;
+        }*/

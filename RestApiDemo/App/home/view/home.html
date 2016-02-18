@@ -1,0 +1,279 @@
+﻿<div class="section no-pad-bot" id="index-banner" ng-controller="homecontroller">
+    <!--<div class="container" style="background: url(/image/LinkedIn-Background.png);height:425px;">-->
+    <div class="container" style="background-color:#E8E6E6;">
+        <br><br>
+        <h1 class="header center light ">Journey Starts Here</h1>
+        <!--<div class="row center">
+            <h5 class="header col s12 light">You will get to know the meaning of TechQ</h5>
+        </div>-->
+        <br>
+        <div class="row center">
+            <!--<div class="pm-button"><a href="https://www.payumoney.com/paybypayumoney/#/FE41B0AC6C8FB6954B5CAD79F1027C35"><img src="https://www.payumoney.com//media/images/payby_payumoney/buttons/111.png" /></a></div>-->
+            <!--<form action='https://test.payu.in/_payment' method='post'>
+                <input type="hidden" name="firstname" value="Mahesh" />
+                <input type="hidden" name="lastname" value="" />
+                <input type="hidden" name="surl" value="http://nashy18-001-site1.atempurl.com/#/" />
+                <input type="hidden" name="phone" value="1111111111" />
+                <input type="hidden" name="key" value="gtKFFx" />
+                <input type="hidden" name="hash" value="0c55f67a6a25f5f32e72873559f9971c283117de0a46bf14391f3ae4166b38261794e60c89c16fce9827ac893c4d6a7313a6e9d33bfdfba635815460a445e3e0" />
+                <input type="hidden" name="curl" value="http://www.google.com" />
+                <input type="hidden" name="furl" value="https:/www.facebook.in" />
+                <input type="hidden" name="txnid" value="WRq7485E" />
+                <input type="hidden" name="productinfo" value="shopping" />
+                <input type="hidden" name="amount" value="10.00" />
+                <input type="hidden" name="firstname" value="Mahesh" />
+                <input type="hidden" name="email" value="maheshde@vmokshagroup.com" />
+                <input type="submit" value="submit">
+             </form>-->
+            <!--<div class="pm-button"><a href="https://www.payumoney.com/paybypayumoney/#/94627"><img src="https://www.payumoney.com//media/images/payby_payumoney/buttons/111.png" /></a></div>-->
+            <md-button class="btn-large waves-effect waves-light blue center" ng-click="checkLoginState()">FB Login</md-button>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+            </fb:login-button>
+            <div id="status">
+            </div>         
+        </div>
+        <div class="row center">
+            <div class="col l6">
+                <a href="" id="download-button" class="btn-large waves-effect waves-light bg-primary pull-right" ng-click="showAdvanced($event)">Sign In</a>
+            </div>
+            <div class="col l6">
+                <a href="" id="A1" class="btn-large waves-effect waves-light orange pull-left" ng-click="CreateUser($event)">Sign Up</a>
+            </div>
+            
+        </div>
+        <br><br>
+        <!--<div class="row center">
+            <div class="preloader-wrapper big active" ng-show="clicked">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                        <h5 class="center">Speeds up development</h5>
+                        <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+                        <h5 class="center">User Experience Focused</h5>
+                        <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+                        <h5 class="center">Easy to work with</h5>
+                        <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="section">
+            <div class="row center">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8LVN7WVgx0c" frameborder="0" allowfullscreen></iframe>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/ng-template" id="LoginModalContent.html">
+        <md-dialog aria-label="Mango (Fruit)" flex="60">
+            <form ng-controller="homecontroller">
+                <!--class="form-validation ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-email ng-valid-minlength ng-valid-maxlength ng-valid-validator ng-invalid-validator ng-invalid-b ng-invalid-a"-->
+                <md-toolbar>
+                    <div class="md-toolbar-tools red lighten-1">
+                        <h2>Sign In</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" ng-click="cancel()">
+                            <i class="material-icons">power_settings_new</i>
+                            <!--<md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>-->
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <md-dialog-content style="max-width:800px;max-height:810px; ">
+                    <!--<div>
+                <p>
+                    The mango is a juicy stone fruit belonging to the genus Mangifera, consisting of numerous tropical fruiting trees, cultivated mostly for edible fruit. The majority of these species are found in nature as wild mangoes. They all belong to the flowering plant family Anacardiaceae. The mango is native to South and Southeast Asia, from where it has been distributed worldwide to become one of the most cultivated fruits in the tropics.
+                </p>
+                <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="image/LinkedIn-Background.png">
+                <p>
+                    The highest concentration of Mangifera genus is in the western part of Malesia (Sumatra, Java and Borneo) and in Burma and India. While other Mangifera species (e.g. horse mango, M. foetida) are also grown on a more localized basis, Mangifera indica&mdash;the "common mango" or "Indian mango"&mdash;is the only mango tree commonly cultivated in many tropical and subtropical regions.
+                </p>
+                <p>
+                    It originated in Indian subcontinent (present day India and Pakistan) and Burma. It is the national fruit of India, Pakistan, and the Philippines, and the national tree of Bangladesh. In several cultures, its fruit and leaves are ritually used as floral decorations at weddings, public celebrations, and religious ceremonies.
+                </p>
+            </div>-->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" type="email" ng-model="user.email" class="validate" required>
+                            <label for="email" data-error="Incorrect Email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock_open</i>
+                            <input id="password" type="password" ng-model="user.password" class="validate" required>
+                            <label for="password" data-error="Password Cannot be empty">Password</label>
+                        </div>
+                    </div>
+                    <!--<md-input-container flex="" class="md-default-theme">
+                <label>Email</label>
+                <input name="email" type="email" ng-model="account.forgotemail"
+                       ng-blur="verifyEmail(account.forgotemail)" ng-pattern="/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,5}$/"
+                       required ng-maxlength="100" maxlength="100" />
+                <div ng-messages="ForgotPasswordForm.email.$error" class="ng-active" ng-if='ForgotPasswordForm.email.$touched' aria-live="assertive">
+                    <div ng-message="email">Invalid Email</div>
+                    <div ng-message="required">Email is Required</div>
+                </div>
+            </md-input-container>-->
+                    <!--</div>-->
+                </md-dialog-content>
+                <div class="md-actions" layout="row">
+                    <md-button class="waves-effect waves-light btn" ng-click="CreateUser()">
+                Sign Up
+            </md-button>
+                    <span flex></span>
+                    <!--<md-button ng-click="answer('not useful')">
+                Not Useful
+            </md-button>-->
+                    <md-button type="submit" style="margin-right:20px;" ng-click="Login(user)">
+                        <!--<i class="material-icons right">done</i>&nbsp;-->
+                        Login
+                    </md-button>
+                    <!--<md-button md-no-ink ng-disabled='ForgotPasswordForm.$invalid || sendBttn' md-ink-ripple="" class="md-btn md-raised md-primary b b-light" type="submit" ng-click="forgotPassword(account);">
+                <span class="font-bold text-capitalize">Send</span>
+            </md-button>-->
+                </div>
+            </form>
+        </md-dialog>
+    </script>  
+    <script type="text/ng-template" id="CreateAccountModal.html">
+        <md-dialog aria-label="Mango (Fruit)" flex="60">
+            <form ng-submit="SignUp(user)" ng-controller="homecontroller">
+         <md-toolbar>
+                    <div class="md-toolbar-tools red lighten-1">
+                        <h2>Sign Up</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" ng-click="cancel()">
+                            <i class="material-icons">power_settings_new</i>
+                            <!--<md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>-->
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <md-dialog-content style="max-width:800px;max-height:810px; ">
+                    <div class="row">
+                        <div class="col s4">
+                                <md-input-container>
+                                    <input type="text" ng-model="user.FirstName" required/>
+                                    <label>First Name</label>
+                                </md-input-container>
+                        </div>
+                        <div class="col s4">
+                                <md-input-container>
+                                    <input type="text" ng-model="user.MiddleName" />
+                                    <label>Middle Name</label>
+                                </md-input-container>
+                        </div>
+                        <div class="col s4">
+                                <md-input-container>
+                                    <input type="text" ng-model="user.LastName" required/>
+                                    <label>Last Name</label>
+                                </md-input-container>
+                        </div>                        
+                    </div>
+                    <div class="row">
+                        <div class="col s4">
+                                <md-input-container>
+                                    <input type="email" ng-model="user.Email" required/>
+                                    <label>Email</label>
+                                </md-input-container>
+                        </div>
+                        <div class="col s4">
+                                <md-input-container>
+                                    <input type="text" ng-model="user.UserName" required/>
+                                    <label>Username</label>
+                                </md-input-container>
+                        </div>      
+                        <div class="col s4">
+                                <md-input-container>
+                                    <input type="password" ng-model="user.Password" required/>
+                                    <label>Password</label>
+                                </md-input-container>
+                        </div>                        
+                                            
+                    </div>
+                    <div class="row">
+                        <div class="col s8">
+                                <md-input-container>
+                                    <input type="text" ng-model="user.Address" required/>
+                                    <label>Address</label>
+                                </md-input-container>
+                        </div>
+                        <div class="col s4">
+                                <md-input-container>
+                                    <input type="number" ng-model="user.Mobile" />
+                                    <label>Mobile</label>
+                                </md-input-container>
+                        </div>                            
+                    </div>
+                    <div class="row">
+                         <div class="col s4">                            
+                             <md-input-container>
+                                <label>Sex</label>
+                                <md-select ng-model="user.Sex">
+                                  <md-option value="M">
+                                    Male
+                                  </md-option>
+                                     <md-option value="F">
+                                        Female
+                                  </md-option>
+                                </md-select>
+                              </md-input-container>
+                        </div>
+                        <div class="col s4">
+                                <md-input-container>
+                                    <input type="date" ng-model="user.DOB" required/>
+                                    <label>DOB</label>
+                                </md-input-container>
+                        </div>   
+                        <div class="col s4">                            
+                             <md-input-container>
+                                <label>Role</label>
+                                <md-select ng-model="user.Role" required>
+                                  <md-option value="1">
+                                    Admin
+                                  </md-option>
+                                     <md-option value="2">
+                                        User
+                                  </md-option>
+                                </md-select>
+                              </md-input-container>
+                        </div>
+                    </div>   
+                    <md-button type="submit" class="right" style="margin-right:20px;">
+                        <!--<i class="material-icons right">done</i>&nbsp;-->
+                        Create
+                    </md-button>
+                </md-dialog-content>                   
+            </form>
+        </md-dialog>
+    </script>
+</div>

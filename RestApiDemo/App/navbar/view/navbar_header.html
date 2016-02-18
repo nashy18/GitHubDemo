@@ -1,0 +1,36 @@
+﻿<div ng-controller="navbarcontroller">
+    <div id="navbar">
+        <nav class="red lighten-1" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" class="brand-logo"><span><i class="fa fa-tty">&nbsp;TechQ</i></span></a>
+                <ul class="right hide-on-med-and-down pull-right">
+                    <li id="home" data-ng-class="{'active': URL=='home'}" ng-if="!loggedin"><a href="#/">Home</a></li>
+                    <li id="dashboard" data-ng-class="{'active': URL=='dashboard'}" ng-if="loggedin"><a href="#/dashboard" data-ng-click="URL='dashboard'">Dashboard</a></li>
+                    <li id="about" data-ng-class="{'active': URL=='about'}"><a href="#/aboutus">About Us</a></li>
+                    <li id="vision" data-ng-class="{'active': URL=='vision'}"><a href="#/vision">Vision</a></li>
+                    <!--<li id="mission" data-ng-class="{'active': URL=='mission'}"><a data-ng-click="URL='mission'" href="#/vision&mission">Mission</a></li>-->
+                    <li id="contact" data-ng-class="{'active': URL=='contact'}"><a href="#/contactus">Contact Us</a></li>
+                    <li id="chat" data-ng-class="{'active': URL=='chat'}"><a href="#/chat">Chat</a></li>
+                    <li id="news" data-ng-class="{'active': URL=='news'}"><a href="#/news">News</a></li>
+                    <li id="weather" data-ng-class="{'active': URL=='weather'}"><a href="#/weather">Weather</a></li>
+                    <li id="googlemap" data-ng-class="{'active': URL=='map'}"><a href="#/map">Map</a></li>
+                    <li id="logout"><a href="#/" ng-if="loggedin" data-ng-click="Logout()">Logout</a></li>
+                </ul>
+                <ul id="mobile-demo" class="side-nav">
+                     <li id="Li1" data-ng-class="{'active': URL=='home'}" ng-if="!loggedin"><a href="#/">Home</a></li>
+                    <li id="Li2" data-ng-class="{'active': URL=='dashboard'}" ng-if="loggedin"><a href="#/dashboard" data-ng-click="URL='dashboard'">Dashboard</a></li>
+                    <li id="Li3" data-ng-class="{'active': URL=='about'}"><a href="#/aboutus">About Us</a></li>
+                    <li id="Li4" data-ng-class="{'active': URL=='vision'}"><a href="#/vision">Vision</a></li>
+                    <!--<li id="mission" data-ng-class="{'active': URL=='mission'}"><a data-ng-click="URL='mission'" href="#/vision&mission">Mission</a></li>-->
+                    <li id="Li5" data-ng-class="{'active': URL=='contact'}"><a href="#/contactus">Contact Us</a></li>
+                    <li id="Li6" data-ng-class="{'active': URL=='chat'}"><a href="#/chat">Chat</a></li>
+                    <li id="Li7" data-ng-class="{'active': URL=='news'}"><a href="#/news">News</a></li>
+                    <li id="Li9" data-ng-class="{'active': URL=='weather'}"><a href="#/weather">Weather</a></li>
+                    <li id="Li10" data-ng-class="{'active': URL=='map'}"><a href="#/map">Map</a></li>
+                    <li id="Li8"><a href="#/" ng-if="loggedin" data-ng-click="Logout()">Logout</a></li>
+                </ul>
+               <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+</div>

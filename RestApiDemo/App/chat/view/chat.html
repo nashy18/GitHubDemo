@@ -1,0 +1,50 @@
+﻿<div style="background: url(http://www.ferra.ru/580x600/images/338/338159.jpg);height:500px;">
+    <div id="divContainer" ng-controller="chatcontroller" class="container padder-v" flex="100">
+        <!--<div class="well">
+            <h1 class="text-center"> Chat Room</h1>
+        </div>-->
+        <!--<div class="row">
+            <div class="col l5 center">
+                <img src="http://www.iidexcanada.com/2015/uploads/IDC_LetsChat_Banner.jpg" class="responsive-img" height="425" style="width:948px;" />
+            </div>
+        </div>-->
+        <div id="divLogin" class="row wrapper-xl">
+            <div class="col l3 s2">&nbsp;</div>
+            <div class="col l6 s10">
+                <md-card>
+                    <md-card-content>
+                        <div class="row">
+                            <md-input-container>
+                                <label>Name</label>
+                                <input id="txtNickName" type="text" class="form-control" />
+                            </md-input-container>
+                        </div>
+                        <div class="row center">
+                            <md-button id="btnStartChat">Start Chat</md-button>
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+
+        </div>
+        <div layout="row">
+            <div id="divChat" class="chatRoom">
+                <div class="teal lighten-2">
+                    <span class="text-white">&nbsp;Welcome&nbsp;!</span>&nbsp;<span id="spanUser" class="black-text"></span><span style="margin-left:20px;" class="red"><md-button id="signoutbutton"><i class="fa fa-power-off"></i>&nbsp;Sign Out</md-button></span><span class="pull-right"><span class="fa fa-user">&nbsp;Online</span>&nbsp;<span class="badge-sm light-green-400"><span id="userDetails"></span></span></span>
+                </div>
+                <div class="content">
+                    <div id="divChatWindow" class="chatWindow">
+                    </div>
+                    <div id="divusers" class="users">
+                    </div>
+                </div>
+                <div class="messageBar">
+                    <div class="col l10"><input class="form-control textbox text-white" type="text" id="txtMessage" /></div>
+                    <div class="col l2"><md-button id="btnSendMsg" class="btn-success pull-right">Send</md-button></div>
+                </div>
+            </div>
+        </div>
+        <input id="hdId" type="hidden" />
+        <input id="hdUserName" type="hidden" />
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿<div class="section no-pad-bot" id="index-banner" data-ng-controller="newscontroller">    
+    <div class="container"> 
+        <div class="row">
+            <div class="col s4">
+                <md-input-container>
+                    <label>News Type</label>
+                    <md-select ng-model="url" required>
+                        <md-option value="http://toi.timesofindia.indiatimes.com/rssfeedstopstories.cms">
+                            Times of India
+                        </md-option>
+                        <md-option value="http://timesofindia.feedsportal.com/c/33039/f/533920/index.rss">
+                            Cricket
+                        </md-option>
+                        <md-option value="2">
+                            India Tv
+                        </md-option>
+                        <md-option value="http://zeenews.india.com/rss/india-national-news.xml">
+                            Zee News
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div class="col s4">
+                <br />
+                <md-button ng-click="loadFeed(url)">Go</md-button>
+            </div>
+        </div>       
+        <div class="row">  
+            <div class="col l12">
+                <h2 class="teal-200 center" style="font-family:'SketchFlow Print'">News Headlines</h2>
+                <hr />
+                <div ng-repeat="data in News">
+                        <h3>{{data.title}}</h3>
+                        <br />
+                        <small>{{data.publishedDate}}<br />{{data.author}}</small><br />
+                        <span ng-bind-html="data.MoreInfo"></span><br />
+                        <!--<p>{{data.contentSnippet}}</p>-->
+                    <div id="fb-root"></div>
+                    <div class="fb-comments" data-href="http://nashy18-001-site1.atempurl.com/#/news" data-numposts="5"></div>
+                    <hr />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!--<div id="fb-root"></div>           
+            <div class="fb-comments" data-href="http://nashy18-001-site1.atempurl.com/#/news" data-numposts="5"></div>-->
+        </div>
+    </div>
+</div>

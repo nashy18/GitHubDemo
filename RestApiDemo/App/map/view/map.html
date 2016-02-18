@@ -1,0 +1,83 @@
+﻿<div class="section no-pad-bot" id="index-banner" ng-controller="mapcontroller">
+    <div class="wrapper">
+        <!--<div class="row">
+            <form name="MapByZipCode">
+                <div class="row">
+                    <div class="col l4">&nbsp;</div>
+                    <div class="col l4">
+                        <input type="text" name="ZipTxt" ng-model="ZipCode" g-places-autocomplete  required />
+                    </div>
+                </div>
+                <div class="row center">
+                    <md-button type="submitt" ng-click="SearchMap(ZipCode)" class="md-raised md-warn">Search</md-button>
+                </div>
+            </form>
+        </div>-->
+        <div ng-show="ShowMap"  class="row">
+            <div class="col l3" >
+                <div class="row b b-white b-2x wrapper blue-grey lighten-5">
+                    <md-input-container>
+                        <label>Location</label>
+                        <input type="text" name="location" ng-model="location" g-places-autocomplete />
+                    </md-input-container>
+                    <div class="center">
+                        <md-button ng-click="SearchMap(location)" class="md-btn-circle md-raised md-warn" ng-disabled="location===undefined">Search</md-button>
+                    </div>
+                </div>                
+                <br />
+                <!--<p class="center text-black">&larr;&nbsp;Direction&nbsp;&rarr;</p>-->
+                <div class="row b b-white b-2x wrapper blue-grey lighten-5">
+                    <md-input-container>
+                        <label>Origin</label>
+                        <input type="text" name="start" ng-model="direction.startpoint" g-places-autocomplete />
+                        <!--<md-select id="start" ng-change="calcRoute();" ng-model="start">
+                <md-option value="chicago, il">Chicago</md-option>
+                <md-option value="st louis, mo">St Louis</md-option>
+                <md-option value="joplin, mo">Joplin, MO</md-option>
+                <md-option value="oklahoma city, ok">Oklahoma City</md-option>
+                <md-option value="amarillo, tx">Amarillo</md-option>
+                <md-option value="gallup, nm">Gallup, NM</md-option>
+                <md-option value="flagstaff, az">Flagstaff, AZ</md-option>
+                <md-option value="winona, az">Winona</md-option>
+                <md-option value="kingman, az">Kingman</md-option>
+                <md-option value="barstow, ca">Barstow</md-option>
+                <md-option value="san bernardino, ca">San Bernardino</md-option>
+                <md-option value="los angeles, ca">Los Angeles</md-option>
+            </md-select>-->
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Destination</label>
+                        <input type="text" name="end" ng-model="direction.endpoint" g-places-autocomplete />
+                        <!--<md-select id="end" ng-change="calcRoute();" ng-model="end">
+                    <md-option value="chicago, il">Chicago</md-option>
+                    <md-option value="st louis, mo">St Louis</md-option>
+                    <md-option value="joplin, mo">Joplin, MO</md-option>
+                    <md-option value="oklahoma city, ok">Oklahoma City</md-option>
+                    <md-option value="amarillo, tx">Amarillo</md-option>
+                    <md-option value="gallup, nm">Gallup, NM</md-option>
+                    <md-option value="flagstaff, az">Flagstaff, AZ</md-option>
+                    <md-option value="winona, az">Winona</md-option>
+                    <md-option value="kingman, az">Kingman</md-option>
+                    <md-option value="barstow, ca">Barstow</md-option>
+                    <md-option value="san bernardino, ca">San Bernardino</md-option>
+                    <md-option value="los angeles, ca">Los Angeles</md-option>
+            </md-select>-->
+                    </md-input-container>
+                    <div class="center">
+                        <md-button ng-click="initMap(direction)" class="md-btn-circle md-raised md-warn" ng-disabled="(direction.startpoint===undefined)&&(direction.endpoint===undefined)">Search</md-button>
+                    </div>
+                </div>
+            </div>
+            <div class="col l9">
+                <!--<md-card>
+                    <md-card-content>-->
+                        <!--<div id="dvDistance" class="row"></div>-->
+                        <div id="map" class="row"></div>                        
+                        <div id="dvPanel" class="row" ng-show="ShowDirection"></div>   
+                <div id="warnings-panel"></div>                     
+                    <!--</md-card-content>
+                </md-card>-->
+                    
+        </div>
+    </div>
+</div>
